@@ -13,17 +13,20 @@
 </head>
 <body>
         <header>
-            <nav class="navbar">
+            <nav class="navbar" id="navbar">
                 <div class="navbar__logo">
-                    <h3>logo</h3><p>BRAND NAME</p>
+                    <h2>LOGO</h2><p> BRAND NAME</p>
                 </div>
                     <ul id="menu" class="navbar__menu">
+                        <li id="close__menu">close</li>
                         <li>Home</li>
                         <li>My photografies</li>
                         <li>Blog</li>
                         <li>Contact</li>
                     </ul>
-                    <div id="menu_button" navbar__menu_hamburger>MENU</div>
+                    <div id="menu_button" navbar__menu_hamburger>
+                        <i><img src="./assets/icons/menu_white_24dp.svg"></i>
+                    </div>
             </nav>
             <div class="hero">
                 <div class="hero__element hero__title">
@@ -34,8 +37,9 @@
                         THIS IS A TEMPLATE OF AN PORTFOLIO FOR A PHOTOGRAPHER
                         LOREM IPSUM SIN DUM OMMET 
                      </p>
-                     <button class="hero__button">
-                         GET STARTED
+                     <button class="hero__button" id="section-1-btn" >
+                         START
+                         <img src="./assets/icons/camera_icon.svg"> 
                      </button>
                 </div>
             </div>
@@ -44,12 +48,16 @@
 
         <main>
             
-            <section class="section section-1">
+            <section id="section-1" class="section section-1">
                 <div class="section__item section__item-smaller">
                     <img src="./assets/images/wedding.jpg" alt="">
                     <div class="section__item_text">
                         <h2>WEDDING</h2>
                         <p>capture the most important day of your life</p>
+                    </div>
+                    <div class="onHover">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, sapiente est voluptatibus, quae, reiciendis nisi harum officiis sunt voluptate facere itaque tenetur debitis dolorem placeat fugiat! Debitis delectus soluta temporibus?</p>
+                        <button class="onHover__viewMore"><i>View More</i></button>
                     </div>
                 </div>
                 <div class="section__item section__item-bigger">
@@ -57,6 +65,10 @@
                     <div class="section__item_text">
                         <h2>PORTRAIT</h2>
                         <p>Put your beauty in front of camera</p>
+                    </div>
+                    <div class="onHover">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, sapiente est voluptatibus, quae, reiciendis nisi harum officiis sunt voluptate facere itaque tenetur debitis dolorem placeat fugiat! Debitis delectus soluta temporibus?</p>
+                        <button class="onHover__viewMore"><i>View More</i></button>
                     </div>
                 </div>
             </section>
@@ -68,12 +80,20 @@
                         <h2>URBAN</h2>
                         <p>Cities, building and magic urban scenaries</p>
                     </div>
+                    <div class="onHover">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, sapiente est voluptatibus, quae, reiciendis nisi harum officiis sunt voluptate facere itaque tenetur debitis dolorem placeat fugiat! Debitis delectus soluta temporibus?</p>
+                        <button class="onHover__viewMore"><i>View More</i></button>
+                    </div>
                 </div>
                 <div class="section__item section__item-smaller">
                     <img src="./assets/images/nature.jpg" alt="">
                     <div class="section__item_text">
                         <h2>NATURE</h2>
                         <p>Live free</p>
+                    </div>
+                    <div class="onHover">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, sapiente est voluptatibus, quae, reiciendis nisi harum officiis sunt voluptate facere itaque tenetur debitis dolorem placeat fugiat! Debitis delectus soluta temporibus?</p>
+                        <button class="onHover__viewMore"><i>View More</i></button>
                     </div>
                 </div>
             </section>
@@ -82,8 +102,12 @@
                 <div class="section__item section__item-smaller">
                     <img src="./assets/images/monochrome.jpg" alt="">
                     <div class="section__item_text">
-                        <h2>MONOCHROME</h2>
+                        <h2 style="background-color: rgba(0, 0, 0, .2);">MONOCHROME</h2>
                         <p>One color, different tones</p>
+                    </div>
+                    <div class="onHover">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, sapiente est voluptatibus, quae, reiciendis nisi harum officiis sunt voluptate facere itaque tenetur debitis dolorem placeat fugiat! Debitis delectus soluta temporibus?</p>
+                        <button class="onHover__viewMore"><i>View More</i></button>
                     </div>
                 </div>
                 <div class="section__item section__item-bigger">
@@ -91,6 +115,10 @@
                     <div class="section__item_text">
                         <h2>MINIMALISM</h2>
                         <p>Make a lot with little</p>
+                    </div>
+                    <div class="onHover">
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, sapiente est voluptatibus, quae, reiciendis nisi harum officiis sunt voluptate facere itaque tenetur debitis dolorem placeat fugiat! Debitis delectus soluta temporibus?</p>
+                        <button class="onHover__viewMore"><i>View More</i></button>
                     </div>
                 </div>
             </section>
@@ -136,10 +164,15 @@
 
             <section class="section">
                 <div class="rrss">
-                    <div>facebook</div>
-                    <div>email</div>
-                    <div>adress</div>
-                    <div>rrss icons</div>
+                    <div><i><img style="width: 100%;" src="./assets/icons/mail-icon.svg"></i>youremail@something.com</div>
+                    <div><i><img src="./assets/icons/phone-icon.svg"></i>+5844-4-4444</div>
+                    <div><i><img src="./assets/icons/house-icon.svg"></i>X country, Random city, some direction</div>
+                    
+                    <div>
+                        <i><img src="./assets/icons/facebook-icon.svg"/></i>
+                        <i><img src="./assets/icons/instagram-icon.svg"/></i>
+                        <i><img src="./assets/icons/Whatsapp-icon.svg"/></i>
+                    </div>
                 </div>
             </section>
         </main>
@@ -149,6 +182,7 @@
 
         <script src="script.js"></script>
         <script src="./js/menu.js"></script>
+        <script src="./js/scrollCongif.js"></script>
 
 </body>
 </html>

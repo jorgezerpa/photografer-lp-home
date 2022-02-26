@@ -27,18 +27,34 @@ body{
     color: #fff;
     overflow-x: hidden;
 }
-h1,h2,h3,h4,h5,h6, p, label{
+h1,h2,h3,h4,h5,h6, p, label,a{
     font-family: var(--title-font);
+}
+h1,h2,h3,h4,h5,h6{
+    text-shadow: 1.5px 1.5px rgba(0,0,0,1);
 }
 h1{
     font-size: 3.8rem;
 }
 p{
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     line-height: 2rem;
+    text-shadow: 1px 1px rgba(0,0,0,1);
 }
 li{
     list-style: none;
+}
+a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: #fff;
+}
+i{
+    width: 40px;
+    margin: 10px;
+}
+i img{
+    width: 100%;
 }
 button{
     color: #fff;
@@ -55,6 +71,9 @@ input[type='submit']{
     background-color: #fff;
     outline: none;
     border: 2px solid #fff;
+}
+button:hover, input[type='submit']:hover{
+    transform: scale(.8);
 }
 input[type='text'],input[type='email'],input[type='password'], textarea{
     color: #fff;
@@ -78,22 +97,27 @@ header{
 /* navbar */
 .navbar{
     position: fixed;
+    top: 0;
     z-index: 1000;
     padding: 20px 20px 10px 30px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: .5s all;
 }
 .navbar__logo{
     display: flex;
     align-items: center;
     gap: 5px;
 }
+.navbar__logo h2{
+    font-size: 2.5rem;
+}
 .navbar__menu{
     font-size: 2rem;
     position: fixed;
-    top: 50px;
+    top: 0px;
     left: 0;
     width: 100vw;
     height: 100vh;
@@ -104,6 +128,11 @@ header{
     align-items: center;
     gap: 15px;
     z-index: 100;
+}
+#close__menu{
+    position: fixed;
+    top: 40px;
+    left: 40px;
 }
 .navbar__menu_hamburger{
     z-index: 2000;
@@ -167,10 +196,21 @@ header{
     animation-delay: 3s;
 }
 .hero__text button{
+    transition: .5s all;
+    border-radius: 10px;
     opacity: 0;
     animation: hero-animation3 1s linear forwards;
     animation-delay: 4s;
 }
+.hero__text button img{
+    display: none;
+}
+.hero__text button:hover{
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 2px 5px rgba(255, 255, 255, .5) inset;
+}
+.hero__text button:hover>img{display: inline;}
 
 @keyframes hero-animation1{
     from{opacity: 0;}
@@ -221,13 +261,34 @@ header{
     overflow: hidden;
     max-height: 380px;
     position: relative;
-    border: 1px solid black;
     padding-top: 140px;
     padding-bottom: 140px;
     display: flex;
     justify-content: left;
     align-items: center;
 }
+.onHover{
+    position: absolute;
+    padding: 40px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, .9);
+    z-index: 100;
+    opacity: 0;
+}
+.onHover:hover{
+    opacity: 1;
+}
+/* .onHover__viewMore:hover{
+
+} */
 .section__item-smaller{
     width: 40%;
 }
@@ -256,7 +317,7 @@ header{
 }
 
 /* ------------------------------------
-        MESSAGE
+MESSAGE
 ------------------------------------ */
 .message{
     margin-bottom: 50px;
@@ -328,4 +389,54 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width:600px) {
+    .navbar{
+        justify-content: space-between;
+    }
+    .navbar__logo h2{
+        font-size: 7vw;
+    }
+    .hero{
+        padding-top: 300px;
+        padding-bottom: 200px;
+    }    
+}
+
+@media screen and (max-width:520px) {
+    .navbar{
+        justify-content: space-between;
+    }
+    .hero{
+        padding-top: 400px;
+        padding-bottom: 200px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .navbar{
+        justify-content: space-between;
+    }
+    .navbar__logo p{
+        display: none;
+    }
+    .navbar__menu{
+        font-size: 2rem;
+    }
+    .hero{
+        padding-top: 400px;
+        padding-bottom: 300px;
+    }
+    .hero__text{
+        justify-content: flex-start;
+        gap: 8px;
+        padding-left: 20px;
+    }
+    .section{
+        flex-direction: column;
+    }
+    .section__item-smaller, .section__item-bigger{
+        width: 100%;
+    }
 }
